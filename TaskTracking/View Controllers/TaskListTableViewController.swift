@@ -10,8 +10,9 @@ import UIKit
 
 class TaskListTableViewController: UITableViewController {
 
-    override func viewDidLoad() {
-        super.viewDidLoad()
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        tableView.reloadData()
     }
 
     // MARK: - Table view data source
@@ -23,14 +24,25 @@ class TaskListTableViewController: UITableViewController {
     }
 
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "reuseIdentifier", for: indexPath)
+        let cell = tableView.dequeueReusableCell(withIdentifier: "taskListCell", for: indexPath)
+        
+        let task = TaskController.sharedInstance.tasks[indexPath.row]
+        
+        cell.textLabel?.text = task.name
 
         // Configure the cell...
 
         return cell
     }
 
-
+    override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
+        if editingStyle == .delete {
+            let task = TaskController.sharedInstance.tasks[indexPath.row]
+            
+            TaskController.sharedInstance.delete(task: task)
+            tableView.deleteRows(at: [indexPath], with: .fade)
+        }
+    }
 
 
     // MARK: - Navigation

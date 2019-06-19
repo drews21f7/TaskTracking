@@ -30,11 +30,22 @@ class TaskController {
         
     }
     
-    func remove(task: Task) {
+    func delete(task: Task) {
+        if let moc = task.managedObjectContext {
+            moc.delete(task)
+            saveToPersistentStore()
+            
+        }
         
     }
     
     func saveToPersistentStore() {
+        let moc = CoreDataStack.managedObjectContext
+        do {
+            try moc.save()
+        } catch {
+            print("Error saving to moc: \(error.localizedDescription)")
+        }
         
     }
     
