@@ -150,9 +150,22 @@
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" title="Title" id="5Bk-o3-N7w">
-                        <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="AMF-JN-Fwf"/>
-                        <barButtonItem key="rightBarButtonItem" systemItem="save" id="gz5-0X-nSF"/>
+                        <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="AMF-JN-Fwf">
+                            <connections>
+                                <action selector="cancelButtonTapped:" destination="uO6-WJ-1of" id="A66-XE-05I"/>
+                            </connections>
+                        </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" systemItem="save" id="gz5-0X-nSF">
+                            <connections>
+                                <action selector="saveButtonTapped:" destination="uO6-WJ-1of" id="D23-3k-AZh"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
+                    <connections>
+                        <outlet property="dateDueField" destination="5rW-eN-4kZ" id="OXr-bJ-fWN"/>
+                        <outlet property="nameTextField" destination="jTC-GL-pUg" id="9Sp-xb-WrU"/>
+                        <outlet property="notesTextView" destination="3Os-Jt-Zls" id="IEJ-VN-cgs"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="2JR-it-hUP" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
