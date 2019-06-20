@@ -44,6 +44,13 @@ class TaskDetailTableViewController: UITableViewController {
         //I don't get this v
         self.dueDateValue = sender.date
     }
+    
+    @IBAction func userTappedView(_ sender: Any) {
+        self.nameTextField.resignFirstResponder()
+        self.dateDueField.resignFirstResponder()
+        self.notesTextView.resignFirstResponder()
+    }
+    
     func updateViews() {
         
         guard let task = task else { return }

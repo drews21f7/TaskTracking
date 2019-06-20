@@ -169,6 +169,11 @@
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="2JR-it-hUP" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="o2W-Ej-ukv">
+                    <connections>
+                        <action selector="userTappedView:" destination="uO6-WJ-1of" id="tZi-4s-qnR"/>
+                    </connections>
+                </tapGestureRecognizer>
                 <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="date" minuteInterval="1" id="Uit-Xt-zMd">
                     <rect key="frame" x="0.0" y="0.0" width="414" height="216"/>
                     <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
