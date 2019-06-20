@@ -17,6 +17,7 @@
 		3AA820B022BAE02D0062B172 /* CoreDataStack.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AA820AF22BAE02D0062B172 /* CoreDataStack.swift */; };
 		3AA820B222BAE1F20062B172 /* Task + Convenience.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AA820B122BAE1F20062B172 /* Task + Convenience.swift */; };
 		3AA820B422BAE40E0062B172 /* TaskController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AA820B322BAE40E0062B172 /* TaskController.swift */; };
+		3AA820B722BB0A420062B172 /* DateHelpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AA820B622BB0A420062B172 /* DateHelpers.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,6 +33,7 @@
 		3AA820AF22BAE02D0062B172 /* CoreDataStack.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataStack.swift; sourceTree = "<group>"; };
 		3AA820B122BAE1F20062B172 /* Task + Convenience.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Task + Convenience.swift"; sourceTree = "<group>"; };
 		3AA820B322BAE40E0062B172 /* TaskController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskController.swift; sourceTree = "<group>"; };
+		3AA820B622BB0A420062B172 /* DateHelpers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateHelpers.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -98,6 +100,7 @@
 				3AA8209922BAD85A0062B172 /* TaskTracking.xcdatamodeld */,
 				3AA820AF22BAE02D0062B172 /* CoreDataStack.swift */,
 				3AA820B122BAE1F20062B172 /* Task + Convenience.swift */,
+				3AA820B622BB0A420062B172 /* DateHelpers.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -195,6 +198,7 @@
 				3AA820AB22BADF190062B172 /* TaskListTableViewController.swift in Sources */,
 				3AA820B222BAE1F20062B172 /* Task + Convenience.swift in Sources */,
 				3AA8209B22BAD85A0062B172 /* TaskTracking.xcdatamodeld in Sources */,
+				3AA820B722BB0A420062B172 /* DateHelpers.swift in Sources */,
 				3AA8209322BAD85A0062B172 /* AppDelegate.swift in Sources */,
 				3AA820AE22BADF890062B172 /* TaskDetailTableViewController.swift in Sources */,
 			);

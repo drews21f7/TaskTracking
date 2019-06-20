@@ -40,7 +40,7 @@ class TaskDetailTableViewController: UITableViewController {
         
         guard let task = task else { return }
         nameTextField.text = task.name
-        dateDueField.text = task.due
+        dateDueField.text = task.due?.stringValue()
         notesTextView.text = task.notes
     }
 }
