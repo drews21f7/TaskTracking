@@ -35,7 +35,7 @@
                                     </subviews>
                                 </tableViewCellContentView>
                                 <connections>
-                                    <segue destination="uO6-WJ-1of" kind="show" id="Pr5-yp-Yf9"/>
+                                    <segue destination="uO6-WJ-1of" kind="show" identifier="toDetailListView" id="Pr5-yp-Yf9"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
@@ -205,6 +205,6 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="1IW-UN-GIm"/>
+        <segue reference="Pr5-yp-Yf9"/>
     </inferredMetricsTieBreakers>
 </document>

@@ -7,6 +7,8 @@
 //
 
 import UIKit
+import CoreData
+
 
 class TaskListTableViewController: UITableViewController {
 
@@ -37,10 +39,9 @@ class TaskListTableViewController: UITableViewController {
 
     override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
         if editingStyle == .delete {
-            let task = TaskController.sharedInstance.tasks[indexPath.row]
+            let task = TaskController.sharedInstance.tasks[indexPath.row] //else { return }
             
             TaskController.sharedInstance.delete(task: task)
-            tableView.deleteRows(at: [indexPath], with: .fade)
         }
     }
 
@@ -49,8 +50,46 @@ class TaskListTableViewController: UITableViewController {
 
     // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+        
+        if segue.identifier == "toDetailListView" {
+            
+            guard let index = tableView.indexPathForSelectedRow,
+                let destinationVC = segue.destination as? TaskDetailTableViewController else { return }
+            
+            let task = TaskController.sharedInstance.tasks[index.row]
+            
+            let dueDateValue = TaskController.sharedInstance.tasks[index.row].due
+            
+            destinationVC.task = task
+            destinationVC.dueDateValue = dueDateValue
+        }
+        
     }
 
+}
+
+extension TaskListTableViewController: NSFetchedResultsControllerDelegate {
+    func controller(_ controller: NSFetchedResultsController<NSFetchRequestResult>, didChange anObject: Any, at indexPath: IndexPath?, for type: NSFetchedResultsChangeType, newIndexPath: IndexPath?) {
+        
+        switch type {
+            
+        case .delete:
+            guard let indexPath = indexPath else {return}
+            tableView.deleteRows(at: [indexPath], with: .automatic)
+            
+        case .insert:
+            guard let newIndexPath = newIndexPath else {return}
+            tableView.insertRows(at: [newIndexPath], with: .automatic)
+            
+        case .move:
+            guard let oldIndexPath = indexPath, let newIndexPath = newIndexPath else {return}
+            tableView.moveRow(at: oldIndexPath, to: newIndexPath)
+            
+        case .update:
+            guard let indexPath = indexPath else {return}
+            tableView.reloadRows(at: [indexPath], with: .automatic)
+        @unknown default:
+            fatalError()
+        }
+    }
 }

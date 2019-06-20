@@ -15,7 +15,9 @@ class TaskDetailTableViewController: UITableViewController {
             loadViewIfNeeded()
             self.updateViews()
         }
+    
     }
+    var dueDateValue: Date?
     
     @IBOutlet var dueDatePicker: UIDatePicker!
     
@@ -60,5 +62,5 @@ class TaskDetailTableViewController: UITableViewController {
     }
     
     //I don't get this
-    var dueDateValue: Date?
+    
 }
