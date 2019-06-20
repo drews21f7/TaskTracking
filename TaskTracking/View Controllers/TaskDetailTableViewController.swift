@@ -17,6 +17,8 @@ class TaskDetailTableViewController: UITableViewController {
         }
     }
     
+    @IBOutlet var dueDatePicker: UIDatePicker!
+    
     @IBOutlet weak var nameTextField: UITextField!
 
     @IBOutlet weak var dateDueField: UITextField!
@@ -25,6 +27,7 @@ class TaskDetailTableViewController: UITableViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        dateDueField.inputView = dueDatePicker
         updateViews()
 
     }
@@ -36,6 +39,11 @@ class TaskDetailTableViewController: UITableViewController {
     @IBAction func cancelButtonTapped(_ sender: Any) {
     }
     
+    @IBAction func datePickerValueChanged(_ sender: UIDatePicker) {
+        self.dateDueField.text = sender.date.stringValue()
+        //I don't get this v
+        self.dueDateValue = sender.date
+    }
     func updateViews() {
         
         guard let task = task else { return }
@@ -43,4 +51,7 @@ class TaskDetailTableViewController: UITableViewController {
         dateDueField.text = task.due?.stringValue()
         notesTextView.text = task.notes
     }
+    
+    //I don't get this
+    var dueDateValue: Date?
 }
