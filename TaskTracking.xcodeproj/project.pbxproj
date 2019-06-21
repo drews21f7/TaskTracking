@@ -18,6 +18,7 @@
 		3AA820B222BAE1F20062B172 /* Task + Convenience.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AA820B122BAE1F20062B172 /* Task + Convenience.swift */; };
 		3AA820B422BAE40E0062B172 /* TaskController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AA820B322BAE40E0062B172 /* TaskController.swift */; };
 		3AA820B722BB0A420062B172 /* DateHelpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AA820B622BB0A420062B172 /* DateHelpers.swift */; };
+		3AFFC35E22BC30FE0088ED9C /* ButtonTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AFFC35D22BC30FE0088ED9C /* ButtonTableViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -34,6 +35,7 @@
 		3AA820B122BAE1F20062B172 /* Task + Convenience.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Task + Convenience.swift"; sourceTree = "<group>"; };
 		3AA820B322BAE40E0062B172 /* TaskController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskController.swift; sourceTree = "<group>"; };
 		3AA820B622BB0A420062B172 /* DateHelpers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateHelpers.swift; sourceTree = "<group>"; };
+		3AFFC35D22BC30FE0088ED9C /* ButtonTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonTableViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -71,6 +73,7 @@
 				3AA820A922BAD92D0062B172 /* Models */,
 				3AA820AC22BADF1C0062B172 /* View Controllers */,
 				3AA820B522BAE4110062B172 /* Model Controllers */,
+				3AFFC35D22BC30FE0088ED9C /* ButtonTableViewCell.swift */,
 			);
 			path = TaskTracking;
 			sourceTree = "<group>";
@@ -193,6 +196,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3AFFC35E22BC30FE0088ED9C /* ButtonTableViewCell.swift in Sources */,
 				3AA820B422BAE40E0062B172 /* TaskController.swift in Sources */,
 				3AA820B022BAE02D0062B172 /* CoreDataStack.swift in Sources */,
 				3AA820AB22BADF190062B172 /* TaskListTableViewController.swift in Sources */,
